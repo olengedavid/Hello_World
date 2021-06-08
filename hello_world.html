@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Demo</title>
+    </head>
+    <body>
+        <h1>Hello world demo with kenyan flag colors</h1>
+        <h2 class="word">  
+            <div class="letters">
+                <span id="l">H</span>
+                <span class="l2">E</span>
+                <span class="l3">L</span>
+                <span class="ll">L</span>
+                <span class="l4">O</span>
+                <span class="l5">!</span>
+
+                <span class="l6">W</span>
+                <span class="l7">O</span>
+                <span class="l8">R</span>
+                <span class="l9">L</span>
+                <span class="l10">D</span>
+            </div>
+
+        </h2>
+       <script>
+            var letters = document.querySelector('')
+            letters.innerHTML = letters.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+
+                 anime.timeline({loop: true})
+                .add({
+                    targets: '.word .letters',
+                    scale: [1.2,1],
+                    opacity: [0,1],
+                    translateZ: 0,
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    delay: (el, i) => 70 * (i+1)
+                })
+
+       </script>
+        
+    </body>
+
+</html>
